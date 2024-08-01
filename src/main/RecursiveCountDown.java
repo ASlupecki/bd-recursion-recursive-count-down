@@ -1,4 +1,4 @@
-package com.amazon.ata.recursion.prework;
+package main;
 
 public class RecursiveCountDown {
 
@@ -10,6 +10,17 @@ public class RecursiveCountDown {
      */
     public String countDown(int target) {
         //PARTICIPANTS: replace this placeholder line with your implementation
-        return Integer.toString(-1);
+        String result = Integer.toString(target);
+
+        if (target == 0) {
+            return result;
+        }
+
+        while (target > 0) {
+            target = target -1;
+            result = result.concat(Integer.toString(target));
+        }
+
+        return result;
     }
 }
